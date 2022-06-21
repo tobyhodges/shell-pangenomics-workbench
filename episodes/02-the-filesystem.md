@@ -24,30 +24,29 @@ We've also learned how to use `cd` to change locations and `ls` to list the cont
 of a directory. Now we're going to learn some additional commands for moving around 
 within our file system.
 
-Use the commands we've learned so far to navigate to the `dc_workshop/data/untrimmed_fastq` directory, if you're not already there. 
+Use the commands we've learned so far to navigate to the `gm_workshop/data/` directory, if you're not already there. 
 
 ~~~
 $ cd
-$ cd dc_workshop
+$ cd gm_workshop
 $ cd data
-$ cd untrimmed_fastq
 ~~~
 {: .bash}
 
 What if we want to move back up and out of this directory and to our top level 
-directory? Can we type `cd dc_workshop`? Try it and see what happens.
+directory? Can we type `cd gm_workshop`? Try it and see what happens.
 
 ~~~
-$ cd dc_workshop
+$ cd gm_workshop
 ~~~
 {: .bash}
 
 ~~~
--bash: cd: dc_workshop: No such file or directory
+-bash: cd: gm_workshop: No such file or directory
 ~~~
 {: .output}
 
-Your computer looked for a directory or file called `dc_workshop` within the 
+Your computer looked for a directory or file called `gm_workshop` within the 
 directory you were already in. It didn't know you wanted to look at a directory level
 above the one you were located in. 
 
@@ -68,7 +67,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/home/dcuser/dc_workshop/data
+/home/dcuser/gm_workshop/data
 ~~~
 {: .output}
 
