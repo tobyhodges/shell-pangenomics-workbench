@@ -25,11 +25,11 @@ keypoints:
 
 Now that we know how to navigate around our directory structure, lets
 start working with our sequencing files. We did a sequencing experiment and 
-have two results files, which are stored in our `untrimmed_fastq` directory. 
+have two results files, which are stored in our `data` directory. 
 
 ### Wildcards
 
-Navigate to your `untrimmed_fastq` directory.
+Navigate to your `data` directory.
 
 ~~~
 $ cd ~/dc_workshop/data/untrimmed_fastq
