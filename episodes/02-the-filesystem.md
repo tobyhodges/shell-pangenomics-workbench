@@ -82,7 +82,7 @@ $ cd ../../..
 
 > ## Excercise 1: Finding hidden directories
 >
-> First navigate to the `dc_workshop` directory. There is a hidden directory within this directory. Explore the options for `ls` to 
+> First navigate to the `gm_workshop` directory. There is a hidden directory within this directory. Explore the options for `ls` to 
 > find out how to see hidden directories. List the contents of the directory and 
 > identify the name of the text file in that directory.
 > 
@@ -209,7 +209,7 @@ directory in `home` which is a directory in `/`.
 Now enter the following command:
 
 ~~~
-$ cd /home/dcuser/dc_workshop/.hidden
+$ cd /home/dcuser/gm_workshop/.hidden
 ~~~
 {: .bash}
 
@@ -223,7 +223,7 @@ $ cd
 
 And then
 ~~~
-$ cd dc_workshop/.hidden
+$ cd gm_workshop/.hidden
 ~~~
 {: .bash}
 
