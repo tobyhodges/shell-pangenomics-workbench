@@ -32,7 +32,7 @@ have two results files, which are stored in our `data` directory.
 Navigate to your `data` directory.
 
 ~~~
-$ cd ~/dc_workshop/data/untrimmed_fastq
+$ cd ~/dc_workshop/data/18RS21
 ~~~
 {: .bash}
 
@@ -40,17 +40,19 @@ We are interested in looking at the FASTQ files in this directory. We can list
 all files with the .fastq extension using the command:
 
 ~~~
-$ ls *.fastq
+$ ls *.fasta
 ~~~
 {: .bash}
 
 ~~~
-JC1A_R1.fastq JC1A_R2.fastq JP4D_R1.fastq JP4D_R2.fastq
-~~~
+Streptococcus_agalactiae_18RS21.fastaStreptococcus_agalactiae_18RS21.fasta
+~~
 {: .output}
 
 The `*` character is a special type of character called a wildcard, which can be used to represent any number of any type of character. 
-Thus, `*.fastq` matches every file that ends with `.fastq`. 
+Thus, `*.fasta` matches every file that ends with `.fasta`. 
+
+** Aquí voy. Colocar un ciclo c que hace los .fasta de cada carpta *
 
 This command: 
 
