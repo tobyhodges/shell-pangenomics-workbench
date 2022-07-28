@@ -36,7 +36,7 @@ $ cd ~/dc_workshop/data/18RS21
 ~~~
 {: .bash}
 
-We are interested in looking at the FASTQ files in this directory. We can list
+We are interested in looking at the FASTA files in this directory. We can list
 all files with the .fastq extension using the command:
 
 ~~~
@@ -46,7 +46,7 @@ $ ls *.fasta
 
 ~~~
 Streptococcus_agalactiae_18RS21.fastaStreptococcus_agalactiae_18RS21.fasta
-~~
+~~~
 {: .output}
 
 The `*` character is a special type of character called a wildcard, which can be used to represent any number of any type of character. 
