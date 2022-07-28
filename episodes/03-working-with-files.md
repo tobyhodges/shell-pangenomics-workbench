@@ -52,19 +52,24 @@ Streptococcus_agalactiae_18RS21.fastaStreptococcus_agalactiae_18RS21.fasta
 The `*` character is a special type of character called a wildcard, which can be used to represent any number of any type of character. 
 Thus, `*.fasta` matches every file that ends with `.fasta`. 
 
-** Aquí voy. Colocar un ciclo c que hace los .fasta de cada carpta *
-
 This command: 
 
 ~~~
-$ ls *R1.fastq
+for i in $(ls -d */); do cd $i; ls *.fasta; cd ..; done
 ~~~
 {: .bash}
 
 ~~~
-JC1A_R1.fastq JP4D_R1.fastq
+Streptococcus_agalactiae_18RS21.fasta
+Streptococcus_agalactiae_515.fasta
+Streptococcus_agalactiae_A909.fasta
+Streptococcus_agalactiae_CJB111.fasta
+Streptococcus_agalactiae_COH1.fasta
+Streptococcus_agalactiae_H36B.fasta
 ~~~
 {: .output}
+
+** Aquí voy.Falta explicarlo**
 
 lists only the file that ends with `R1.fastq`.
 
