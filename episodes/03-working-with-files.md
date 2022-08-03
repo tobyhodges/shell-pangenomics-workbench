@@ -69,9 +69,7 @@ Streptococcus_agalactiae_H36B.fasta
 ~~~
 {: .output}
 
-** Aquí voy.Falta explicarlo**
-
-lists only the file that ends with `R1.fastq`.
+lists only the file that ends with `R1.fastq` in each data directory folder.
 
 ## Command History
 
@@ -135,7 +133,19 @@ are identical to the `man` program.
 Enter the following command:
 
 ~~~
-$ less JC1A_R2.fastq
+$ cd ~/dc_workshop/data/515
+$ ls
+~~~
+{: .bash}
+
+~~~
+Streptococcus_agalactiae_515.fasta  
+Streptococcus_agalactiae_515.gbk
+~~~
+{: .output}
+
+~~~
+$ less Streptococcus_agalactiae_515.fasta
 ~~~
 {: .bash}
 
@@ -179,41 +189,40 @@ The commands are `head` and `tail` and they let you look at
 the beginning and end of a file, respectively.
 
 ~~~
-$ head JC1A_R2.fastq
+$ head Streptococcus_agalactiae_515.fasta 
 ~~~
 {: .bash}
 
 ~~~
-@MISEQ-LAB244-W7:91:000000000-A5C7L:1:1101:13417:1998 2:N:0:TCGNAG
-CGCGATCAGCAGCGGCCCGGAACCGGTCAGCCGCGCCNTGGGGTTCAGCACCGGCNNGGCGAAGGCCGCGATCGCGGCGGCGGCGATCAGGCAGCGCAGCAGCAGGAGCCACCAGGGCGTGCGGTCGGGCGTCCGTTCGGCGTCCTCGCGCCCCAGCAGCAGGCGCACGCCAGGGAATCCGACCCGCCGCCGGCTCGGCCGCGTCNCCCGCNCCCGCCCCCCGAGCACCCGNAGCCNCNCCACCGCCGCCC
-+
-1>AAADAAFFF1G11AA0000AAFE/AAE0FBAEGGG#B/>EF/EGHHHHHHG?C##???/FE/ECHCE?C<FGGGGCCCGGGG@?AE.BFFEAB-9@@@FFFFFEEEEFBFF--99A-;@B=@A@@?@@>-@@--/B--@--@@-F----;@--:F---9-AB9=-@-9E-99A-;:BF-9-@@-;@-@#############################################################
-@MISEQ-LAB244-W7:91:000000000-A5C7L:1:1101:15782:2187 2:N:0:TCGAAG
-CAACCGGCTGATCCTCGACGCCATCGAGGCGACCGGCGCCGGCGCCGACGGGCTGATCACCGCCGCCGAGGTCGTCGCGATCAACGCGGCGATCCGCGGCGACGCGACGCCCCTCGCCGACTTCGTCGACCTGCACGGCGACGACGAGGAGGGCCTCGAGACCGGCTTCCCCCTGATCCAGGGCGACGGCGCCGCGACGCAGCTCGGCGGGTTCCACCCTCCTCACCGGGCCGCCGCCGGCTTCTACCCGA
-+
-BBBBBBBBDBFFGGFFEEGEFG2FHGFEGCA?EEGCE@EFEEE/EEE@EDCFDCAC2G2CG?CC/CFG?C?DHFCGCGFD-C.0;DFA-AD;AFFFF;DF-BB--@;>9D-@DAD->>=-@-9FFBDCFFFFB?.FE@---;@9@--9@9AD;D?.F.9..AE;C;-;;B.;D##############################################################################
-@MISEQ-LAB244-W7:91:000000000-A5C7L:1:1101:11745:2196 2:N:0:NCGAAG
-CGAAAAGCCGCGCGCCGACCTGGGCGTCGAGCGCCGCGCCGCTCCAACGAACGCCAGGCGATCCGAGCGCGGCGGCGATGGCACCCGGATCGAGCCCGGTAAAGTCGGCCCGTAGGTCGAGGCCGCCGCCGCCAGGCGCCACTTCGAGCCGTGGGAGATGCAACGTTAGCGGCGCCGCCCCGTCGGCCGTCTCGAGCAAAATGCGCGTGTCGGTGAGCCGCCGGTGCTCCGGCAACCGCATCCTGCGCCAG
-
+>AAJP01000255.1
+gtcaatcaactcaatattgtcgaccttagcagcctgaaggtggctgtcaa
+cgtcgcgacgatccagaagcccaccgtgaatgtttgggtggagggtctta
+acacgaccgtccatcatttctgggaatccagtcacatcgtcgatgggaat
+ggtctcaacaccagcatcgtcaagggcaaccttagtcccaccaggtgaga
+taatatcccaacc
+>AAJP01000254.1
+cgacttcatgtatgcgagatgcagcctacaatccgaactgagattggctt
+taagagattatcttgccgtcaccggcttgcgactctctgtaccaaccatt
+gtagcacgtgtgtagcccacgtcatatggggcatgatgatttgacgtcat
 ~~~
 {: .output}
 
 ~~~
-$ tail JC1A_R2.fastq
+$ tail Streptococcus_agalactiae_515.fasta 
 ~~~
 {: .bash}
 
 ~~~
-+SRR098026.247 HWUSI-EAS1599_1:2:1:2:1311 length=35
-#!##!#################!!!!!!!######
-@SRR098026.248 HWUSI-EAS1599_1:2:1:2:118 length=35
-GNTGNGGTCATCATACGCGCCCNNNNNNNGGCATG
-+SRR098026.248 HWUSI-EAS1599_1:2:1:2:118 length=35
-B!;?!A=5922:##########!!!!!!!######
-@SRR098026.249 HWUSI-EAS1599_1:2:1:2:1057 length=35
-CNCTNTATGCGTACGGCAGTGANNNNNNNGGAGAT
-+SRR098026.249 HWUSI-EAS1599_1:2:1:2:1057 length=35
-A!@B!BBB@ABAB#########!!!!!!!######
+ccatgaataagcctactactgcaaaaattgcaacttctgcaaaaatttgt
+aaaccaatcggtaatcccaatcgaatatcttcaataatcaaaggagcttt
+tattctttccagagtccatatatgatatgttttaatttgaggatgaagtg
+acatcacaataataataacaataaaaatagcccaataagttaaagaagtt
+ccaagacctgcccccgcacctcctagtctaggcataccaaatttaccgta
+gataagcatataattaaaaaatgaattaaagggtagaawwaaaagcatca
+gatacatagataaccttgttaaccccaatgcatcaaagaatgaacggcaa
+atgctaaacaacaccagcggcatgattccaatcaacatataatttaaata
+accacgaccaactgctagaacttcatcttctaaacccaaactccccaaaa
+cagg
 ~~~
 {: .output}
 
@@ -221,24 +230,26 @@ The `-n` option to either of these commands can be used to print the
 first or last `n` lines of a file. 
 
 ~~~
-$ head -n 1 JC1A_R2.fastq
+$ head -n 1 Streptococcus_agalactiae_515.fasta
 ~~~
 {: .bash}
 
 ~~~
-@MISEQ-LAB244-W7:91:000000000-A5C7L:1:1101:13417:1998 2:N:0:TCGNAG
+>AAJP01000255.1
 ~~~
 {: .output}
 
 ~~~
-$ tail -n 1 JC1A_R2.fastq
+$ tail -n 1 Streptococcus_agalactiae_515.fasta
 ~~~
 {: .bash}
 
 ~~~
-AAA#>>A#1>AAGGGGGGGG#ABFEFGGHGEFGEGGGEGFHHHGGGGGGGGEEEEEGCG?EGHHHG@CC#??#???FFG############################################################################################################################################################################
+cagg
 ~~~
 {: .output}
+
+** Aquí voy **
 
 
 ## Details on the FASTQ format
