@@ -335,6 +335,7 @@ we can now see that the quality of each of the `N`s is 0 and the quality of the 
 nucleotide call (`C`) is also very poor (`#` = a quality score of 2). This is indeed a very
 bad read. 
 
+** Hasta aquí no sé qué hacer. **
 
 ## Creating, moving, copying, and removing
 
@@ -344,7 +345,6 @@ but there will be some cases (like when you're working with a remote computer li
 impossible. You'll also find that you may be working with hundreds of files and want to do similar manipulations to all 
 of those files. In cases like this, it's much faster to do these operations at the command line.
 
-** Hasta aquí no sé qué hacer. **
 
 ### Copying Files
 
