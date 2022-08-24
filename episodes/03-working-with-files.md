@@ -249,37 +249,44 @@ cagg
 ~~~
 {: .output}
 
-** Aquí voy **
-
-
-## Details on the FASTQ format
+## Details on the FASTA format
 
 Although it looks complicated (and it is), it's easy to understand the
-[fastq](https://en.wikipedia.org/wiki/FASTQ_format) format with a little decoding. Some rules about the format
+[fastq](https://en.wikipedia.org/wiki/FASTA_format) format with a little decoding. Some rules about the format
 include...
 
 |Line|Description|
 |----|-----------|
-|1|Always begins with '@' and then information about the read|
+|1|May start with a ";" or ">", follows by a name and/or a unique identifier for the sequence, and may also contain additional information|
 |2|The actual DNA sequence|
-|3|Always begins with a '+' and sometimes the same info in line 1|
-|4|Has a string of characters which represent the quality scores; must have same number of characters as line 2|
+|3|If there are more sequences, it always begins with a '>',  and info like info in line 1|
 
 We can view the first complete read in one of the files our dataset by using `head` to look at
 the first four lines.
 
 ~~~
-$ head -n 4 JC1A_R2.fastq
+$ cd ~/dc_workshop/data/18RS21
+$ head -n 10 Streptococcus_agalactiae_18RS21.fasta
 ~~~
 {: .bash}
 
 ~~~
-@MISEQ-LAB244-W7:91:000000000-A5C7L:1:1101:13417:1998 2:N:0:TCGNAG
-CGCGATCAGCAGCGGCCCGGAACCGGTCAGCCGCGCCNTGGGGTTCAGCACCGGCNNGGCGAAGGCCGCGATCGCGGCGGCGGCGATCAGGCAGCGCAGCAGCAGGAGCCACCAGGGCGTGCGGTCGGGCGTCCGTTCGGCGTCCTCGCGCCCCAGCAGCAGGCGCACGCCAGGGAATCCGACCCGCCGCCGGCTCGGCCGCGTCNCCCGCNCCCGCCCCCCGAGCACCCGNAGCCNCNCCACCGCCGCCC
-+
-1>AAADAAFFF1G11AA0000AAFE/AAE0FBAEGGG#B/>EF/EGHHHHHHG?C##???/FE/ECHCE?C<FGGGGCCCGGGG@?AE.BFFEAB-9@@@FFFFFEEEEFBFF--99A-;@B=@A@@?@@>-@@--/B--@--@@-F----;@--:F---9-AB9=-@-9E-99A-;:BF-9-@@-;@-@#############################################################
+>AAJO01000553.1
+cgtgaacgttgactatctacaaccgtttcttccataatggtcaaaatctt
+tgtacggtcaactttaaatgtgaatgtcttattattaacctttacttttt
+gagttgatgaactttgatctgctcgagagagttggctcatttcgtttttt
+aacgattttaactctcgacgaagactatctaattctgctgtcacatctct
+gagtaattcaggaaaagcaagtctacttttttcgtttttaaacactcaaa
+atacgatgc
+>AAJO01000552.1
+gcgggtcggaacttacccgacaaggaatttcgctaccttaggaccgttat
+agttacggccgctskttactggggcttcaattcataccttcgcttacgct
 ~~~
 {: .output}
+
+
+** De aquí ... **
+
 
 Most of the nucleotides are correct, although we have some unknown bases (N). This is actually a good read!
 
@@ -337,29 +344,40 @@ but there will be some cases (like when you're working with a remote computer li
 impossible. You'll also find that you may be working with hundreds of files and want to do similar manipulations to all 
 of those files. In cases like this, it's much faster to do these operations at the command line.
 
+** Hasta aquí no sé qué hacer. **
+
 ### Copying Files
 
 When working with computational data, it's important to keep a safe copy of that data that can't be accidentally overwritten or deleted. 
-For this lesson, our raw data is our FASTQ files.  We don't want to accidentally change the original files, so we'll make a copy of them
-and change the file permissions so that we can read from, but not write to, the files.
+For this lesson, our raw data is our FASTA files.  We don't want to accidentally change the original files, so we'll make a copy of them
+and change the file permissions so that we can read from, but not write tcdo, the files.
 
-First, let's make a copy of one of our FASTQ files using the `cp` command. 
+First, let's make a copy of one of our FASTA files using the `cp` command. 
 
-Navigate to the `/home/dcuser/dc_workshop/data/untrimmed_fastq` directory and enter:
+Navigate to the `~/dc_workshop/data directory and enter:
 
 ~~~
-$ cp JC1A_R2.fastq JC1A_R2-copy.fastq
-$ ls -F
+$ for i in $(ls -d */); do cd $i; for j in $(ls *.fasta); do cp $j copy-$j  ; done; cd ..; done
+$ for i in $(ls -d */); do cd $i; ls -F; cd ..; done
 ~~~
 {: .bash}
 
 ~~~
-JC1A_R1.fastq  JC1A_R2-copy.fastq  JC1A_R2.fastq  JP4D_R1.fastq  JP4D_R2.fastq
+copy-Streptococcus_agalactiae_18RS21.fasta  Streptococcus_agalactiae_18RS21.gbk Streptococcus_agalactiae_18RS21.fasta
+
+copy-Streptococcus_agalactiae_515.fasta  Streptococcus_agalactiae_515.gbk Streptococcus_agalactiae_515.fasta
+
+copy-Streptococcus_agalactiae_A909.fasta  Streptococcus_agalactiae_A909.gbk Streptococcus_agalactiae_A909.fasta
+
+copy-Streptococcus_agalactiae_CJB111.fasta  Streptococcus_agalactiae_CJB111.gbk Streptococcus_agalactiae_CJB111.fasta
+
+copy-Streptococcus_agalactiae_COH1.fasta  Streptococcus_agalactiae_COH1.gbk Streptococcus_agalactiae_COH1.fasta
+
+copy-Streptococcus_agalactiae_H36B.fasta  Streptococcus_agalactiae_H36B.gbk Streptococcus_agalactiae_H36B.fasta
 ~~~
 {: .output}
 
-We now have two copies of the `JC1A_R2.fastq` file, one of them named `JC1A_R2-copy.fastq`. We'll move this file to a new directory
-called `backup` where we'll store our backup data files.
+We now, for example, have two copies of the `Streptococcus_agalactiae_18RS21.fasta` file, one of them named `copy-Streptococcus_agalactiae_18RS21.fasta`. We'll move this file to a new directory called `backup` where we'll store our backup data files.
 
 ### Creating Directories
 
@@ -377,13 +395,18 @@ We can now move our backup file to this directory. We can
 move files around using the command `mv`. 
 
 ~~~
-$ mv JC1A_R2-copy.fastq backup
+$ for i in $(ls -d */); do cd $i; mv copy-* ~/gm_workshop/backup; cd ..; done
 $ ls backup
 ~~~
 {: .bash}
  
 ~~~
-JC1A_R2-copy.fastq
+copy-Streptococcus_agalactiae_18RS21.fasta
+copy-Streptococcus_agalactiae_515.fasta
+copy-Streptococcus_agalactiae_A909.fasta
+copy-Streptococcus_agalactiae_CJB111.fasta
+copy-Streptococcus_agalactiae_COH1.fasta
+copy-Streptococcus_agalactiae_H36B.fasta
 ~~~
 {: .output}
 
@@ -391,16 +414,22 @@ The `mv` command is also how you rename files. Let's rename this file to make it
 
 ~~~
 $ cd backup
-$ mv JC1A_R2-copy.fastq JC1A_R2-backup.fastq
+$ mv copy-Streptococcus_agalactiae_18RS21.fasta backup-Streptococcus_agalactiae_18RS21.fasta
 $ ls
 ~~~
 {: .bash}
 
 ~~~
-JC1A_R2-backup.fastq
+backup-Streptococcus_agalactiae_18RS21.fasta
+copy-Streptococcus_agalactiae_515.fasta
+copy-Streptococcus_agalactiae_A909.fasta
+copy-Streptococcus_agalactiae_CJB111.fasta
+copy-Streptococcus_agalactiae_COH1.fasta
+copy-Streptococcus_agalactiae_H36B.fasta
 ~~~
 {: .output}
 
+** Aquí voy (falta ver como cambiarle el nombre a todos los archivos en un solo ciclo)**
 
 ### Removing
 
