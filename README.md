@@ -1,10 +1,10 @@
-# Introduction to the Command Line for Comparative Genomics
+# Introduction to the Command Line for Pangenome Analysis in Prokaryotes
 
-An introduction lesson to the Unix shell for people working with bacterial genomics data. This lesson is part of the [Comparative Bacterial Genomics Workshop](https://czirion.github.io/comparative-genomics-workshop/).
+An introduction lesson to the Unix shell for people working with pangenome analysis in prokaryotes. This lesson is part of the [Pangenome Analysis in Prokaryotes Workshop](https://czirion.github.io/pangenomics-workshop/).
 
 ## Contribution
 
-Make a suggestion or correct an error by [suggesting a Pull request](https://github.com/Czirion/shell-comparative-genomics/pulls).
+Make a suggestion or correct an error by [suggesting a Pull request](https://github.com/Czirion/shell-pangenomics/pulls).
 
 ## Code of Conduct
 
