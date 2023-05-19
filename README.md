@@ -1,6 +1,7 @@
+
 # Introduction to the Command Line for Pangenomics
 
-An introduction lesson to the Unix shell for people working with bacterial genomics data. This lesson is part of the [Pangenomics Workshop](https://czirion.github.io/pangenomics-workshop/).
+An introduction lesson to the Unix shell for people working with bacterial pangenomics data. This lesson is part of the [Pangenomics Workshop](https://czirion.github.io/pangenomics-workshop/).
 
 ## Contribution
 
