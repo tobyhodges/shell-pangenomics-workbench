@@ -1,6 +1,7 @@
-# Introduction to the Command Line for Pangenome Analysis in Prokaryotes
 
-An introduction lesson to the Unix shell for people working with pangenome analysis in prokaryotes. This lesson is part of the [Pangenome Analysis in Prokaryotes Workshop](https://czirion.github.io/pangenomics-workshop/).
+# Introduction to the Command Line for Pangenomics
+
+An introduction lesson to the Unix shell for people working with bacterial pangenomics data. This lesson is part of the [Pangenomics Workshop](https://czirion.github.io/pangenomics-workshop/).
 
 ## Contribution
 
