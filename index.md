@@ -22,7 +22,7 @@ There are quite a few reasons to start learning about the shell:
 > This lesson is part of a workshop that uses data hosted on an Amazon Machine Instance (AMI). Workshop participants will be given 
 > information on how
 > to log-in to the AMI during the workshop. Learners using these materials for self-directed study will need to set up their own
-> AMI. Information on setting up an AMI and accessing the required data is provided on the [Pangenomics Workshop Setup page](https://carpentries-incubator.github.io/pangenomics-workshop/setup.html).
+> AMI. Information on setting up an AMI and accessing the required data is provided on the [Pangenomics Workshop Setup page](https://czirion.github.io/pangenomics-workshop/setup.html).
 {: .prereq}
 
 > ## For Instructors
@@ -32,7 +32,7 @@ There are quite a few reasons to start learning about the shell:
 {: .prereq}
 
 
-This is the second lesson of the [Pangenomics Workshop](https://carpentries-incubator.github.io/pangenomics-workshop/) comprised of four lessons in total. 
+This is the second lesson of the [Pangenomics Workshop](https://czirion.github.io/pangenomics-workshop/) comprised of four lessons in total. 
 
 ## Lesson Reference
 This page and the six episodes in this lesson are adapted from [Introduction to the Command Line for Genomics](https://datacarpentry.org/shell-genomics/) lesson.
