@@ -109,6 +109,19 @@ up until this point.
 
 ## Navigating your file system
 
+> ## Prepare your genome database
+> Make sure you have the `pan_workshop/` directory. If you do not have it, you can download it with the following instructions.
+>
+> ~~~
+> $ cd ~ #Make sure you are in the home directory
+> $ wget https://zenodo.org/record/7651068/files/pan_workshop.zip?download=1 #Download the `zip` file.
+> $ unzip 'pan_workshop.zip?download=1' 
+> $ rm 'pan_workshop.zip?download=1'
+> ~~~
+> {: .language-bash}
+{: .checklist}
+
+
 The part of the operating system responsible for managing files and directories
 is called the **file system**.
 It organizes our data into files,
