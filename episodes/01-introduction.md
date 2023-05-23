@@ -341,7 +341,7 @@ $ ls ag<tab>
 ~~~
 {: .bash}
 
-The shell auto-completes your command to `agalactiae_`, because there is another file name in 
+The shell auto-completes your command to `agalactiae_`, because there is another name in 
 the directory begin with this prefix. When you hit
 <kbd>Tab</kbd> again, the shell will list the possible choices.
 
