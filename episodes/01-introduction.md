@@ -186,24 +186,24 @@ $ ls
 {: .bash}
 
 ~~~
-dc_workshop  R 
+pan_workshop   
 ~~~
 {: .output}
 
 `ls` prints the names of the files and directories in the current directory in
 alphabetical order, arranged neatly into columns. 
-We'll be working within the `dc_workshop` subdirectory, and creating new subdirectories, 
+We'll be working within the `pan_workshop` subdirectory, and creating new subdirectories, 
 throughout this workshop.  
 
 The command to change locations in our file system is `cd` followed by a
 directory name to change our working directory.
 `cd` stands for "change directory".
 
-Let's say we want to navigate to the `dc_workshop` directory we saw above.  We can
+Let's say we want to navigate to the `pan_workshop` directory we saw above.  We can
 use the following command to get there:
 
 ~~~
-$ cd dc_workshop
+$ cd pan_workshop
 ~~~
 {: .bash}
 
@@ -215,7 +215,7 @@ $ ls
 {: .bash}
 
 ~~~
-data	mags  taxonomy
+data  
 ~~~
 {: .output}
 
@@ -228,7 +228,7 @@ $ ls -F
 {: .bash}
 
 ~~~
-data/  mags/  taxonomy/
+data/  
 ~~~
 {: .output}
 
@@ -242,7 +242,7 @@ To understand a little better how to move between folders, let's see the followi
 </a>
 
 Here we can see a diagram of how the folders are arranged one inside another. In this way, if we think about moving,
-from dc_workshop to the untrimmed_fastq folder, the path must go as they are ordered: `cd dc_workshop/data/untrimmed_fastq`
+from `pan_workshop` to the `data` folder, the path must go as they are ordered: `cd pan_workshop/data`
 
 `ls` has lots of other options. To find out what they are, we can type:
 
@@ -268,10 +268,8 @@ to quit.
 > > {: .bash}
 > > 
 > > ~~~
-> > total 12
-> > drwxr-xr-x 3 dcuser dcuser 4096 Jun  3 17:59 data
-> > drwxrwxr-x 2 dcuser dcuser 4096 Jun  3 18:02 mags
-> > drwxrwxr-x 3 dcuser dcuser 4096 Jun  3 18:25 taxonomy
+> > total 4
+> > drwxr-xr-x 4 dcuser dcuser 4096 feb 17 12:42 data
 > > ~~~
 > > {: .output}
 > > 
@@ -286,33 +284,16 @@ No one can possibly learn all of these arguments, that's why the manual page
 is for. You can (and should) refer to the manual page or other help files
 as needed.
 
-Let's go into the `data/untrimmed_fastq` directory and see what is in there.
+Let's go into the `data/agalactiae_H36B` directory and see what is in there.
 
 ~~~
-$ cd data/untrimmed_fastq
+$ cd data/agalactiae_H36B
 $ ls -F
 ~~~
 {: .bash}
 
 ~~~
-JC1A_R1.fastq.gz  JC1A_R2.fastq.gz  JP4D_R1.fastq.gz  JP4D_R2.fastq.gz
-~~~
-{: .output}
-
-This directory contains four files with `.fastq.gz` extensions. FASTQ is a format
-for storing information about sequencing reads and their quality. GZ is an archive file compressed.
-We will be learning more about FASTQ files in a later lesson. These data comes in a compressed format, 
-which is why there is a `.gz` at the end of the files. 
-This makes it faster to transfer, and allows it to take up less space on our computer. 
-Let's use `gunzip` to decompress the files so that we can look at the FASTQ format.
-~~~
-$ gunzip JC1A_R1.fastq.gz  JC1A_R2.fastq.gz  JP4D_R1.fastq.gz  JP4D_R2.fastq.gz
-$ ls
-~~~
-{: .bash}
-
-~~~
-JC1A_R1.fastq  JC1A_R2.fastq  JP4D_R1.fastq  JP4D_R2.fastq
+Streptococcus_agalactiae_H36B.fna  Streptococcus_agalactiae_H36B.gbk
 ~~~
 {: .output}
 
@@ -336,17 +317,17 @@ $ cd
 then enter:
 
 ~~~
-$ cd dc<tab>
+$ cd pan<tab>
 ~~~
 {: .bash}
 
 The shell will fill in the rest of the directory name for
-`dc_workshop`.
+`pan_workshop`.
 
-Now change directories to `data` in `dc_workshop`
+Now change directories to `data` in `pan_workshop`
 
 ~~~
-$ cd dc_workshop
+$ cd pan_workshop
 $ cd data
 ~~~
 {: .bash}
@@ -355,27 +336,22 @@ Using tab complete can be very helpful. However, it will only autocomplete
 a file or directory name if you've typed enough characters to provide
 a unique identifier for the file or directory you are trying to access.
 
-If we navigate back to our `data` directory and try to access one of our sample files:
-
 ~~~
-$ cd
-$ cd dc_workshop
-$ cd data/untrimmed_fastq
-$ ls JC<tab>
+$ ls ag<tab>
 ~~~
 {: .bash}
 
-The shell auto-completes your command to `JC1A_R`, because there is another file name in 
+The shell auto-completes your command to `agalactiae_`, because there is another file name in 
 the directory begin with this prefix. When you hit
 <kbd>Tab</kbd> again, the shell will list the possible choices.
 
 ~~~
-$ ls JC1A_R<tab><tab>
+$ ls  ag<tab><tab>
 ~~~
 {: .bash}
 
 ~~~
-JC1A_R1.fastq  JC1A_R2.fastq
+agalactiae_18RS21/ agalactiae_H36B/
 ~~~
 {: .output}
 
