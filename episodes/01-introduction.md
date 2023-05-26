@@ -114,7 +114,7 @@ up until this point.
 >
 > ~~~
 > $ cd ~ #Make sure you are in the home directory
-> $ wget https://zenodo.org/record/7651068/files/pan_workshop.zip?download=1 #Download the `zip` file.
+> $ wget https://zenodo.org/record/7974915/files/pan_workshop.zip?download=1 #Download the `zip` file.
 > $ unzip 'pan_workshop.zip?download=1' 
 > $ rm 'pan_workshop.zip?download=1'
 > ~~~
