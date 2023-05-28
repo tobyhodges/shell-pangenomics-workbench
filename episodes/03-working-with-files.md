@@ -32,7 +32,7 @@ have two results files, which are stored in our `data` directory.
 Navigate to your `data` directory.
 
 ~~~
-$ cd ~/dc_workshop/data/18RS21
+$ cd ~/pan_workshop/data
 ~~~
 {: .bash}
 
@@ -45,7 +45,7 @@ $ ls *.fasta
 {: .bash}
 
 ~~~
-Streptococcus_agalactiae_18RS21.fastaStreptococcus_agalactiae_18RS21.fasta
+Streptococcus_agalactiae_18RS21.fasta Streptococcus_agalactiae_18RS21.fasta
 ~~~
 {: .output}
 
@@ -69,7 +69,7 @@ Streptococcus_agalactiae_H36B.fasta
 ~~~
 {: .output}
 
-lists only the file that ends with `R1.fastq` in each data directory folder.
+lists only the file that ends with `.fasta` in each data directory folder.
 
 ## Command History
 
@@ -98,16 +98,16 @@ directly by referring to the number of that command.
 For example, if your history looked like this:
 
 ~~~
-259  ls *
-260  ls /usr/bin/*.sh
-261  ls *R1*fastq
+479  ls *
+480  ls /usr/bin/*.sh
+481  ls *.fasta
 ~~~
 {: .output}
 
-then you could repeat command #260 by entering:
+then you could repeat command #481 by entering:
 
 ~~~
-$ !260
+$ !481
 ~~~
 {: .bash}
 
@@ -133,7 +133,7 @@ are identical to the `man` program.
 Enter the following command:
 
 ~~~
-$ cd ~/dc_workshop/data/515
+$ cd ~/pan_workshop/data
 $ ls
 ~~~
 {: .bash}
