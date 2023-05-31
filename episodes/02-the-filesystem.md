@@ -105,7 +105,7 @@ $ cd ../../..
 > > {: .bash}
 > > 
 > > ~~~
-> >.  ..  data  .hidden  mags  taxonomy
+> >.  ..  agalactiae_18RS21  agalactiae_H36B .hidden annotated_mini
 > > ~~~
 > > {: .output}
 > > 
@@ -209,7 +209,7 @@ directory in `home` which is a directory in `/`.
 Now enter the following command:
 
 ~~~
-$ cd /home/dcuser/gm_workshop/.hidden
+$ cd /home/dcuser/apan_workshop/.hidden
 ~~~
 {: .bash}
 
@@ -223,7 +223,7 @@ $ cd
 
 And then
 ~~~
-$ cd gm_workshop/.hidden
+$ cd pan_workshop/.hidden
 ~~~
 {: .bash}
 
