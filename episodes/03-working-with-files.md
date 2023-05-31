@@ -40,36 +40,17 @@ We are interested in looking at the FASTA files in this directory. We can list
 all files with the .fastq extension using the command:
 
 ~~~
-$ ls *.fasta
+$ ls */*.gbk
 ~~~
 {: .bash}
 
 ~~~
-Streptococcus_agalactiae_18RS21.fasta Streptococcus_agalactiae_18RS21.fasta
+agalactiae_18RS21/Streptococcus_agalactiae_18RS21.gbk  agalactiae_H36B/Streptococcus_agalactiae_H36B.gbk
 ~~~
 {: .output}
 
 The `*` character is a special type of character called a wildcard, which can be used to represent any number of any type of character. 
-Thus, `*.fasta` matches every file that ends with `.fasta`. 
-
-This command: 
-
-~~~
-for i in $(ls -d */); do cd $i; ls *.fasta; cd ..; done
-~~~
-{: .bash}
-
-~~~
-Streptococcus_agalactiae_18RS21.fasta
-Streptococcus_agalactiae_515.fasta
-Streptococcus_agalactiae_A909.fasta
-Streptococcus_agalactiae_CJB111.fasta
-Streptococcus_agalactiae_COH1.fasta
-Streptococcus_agalactiae_H36B.fasta
-~~~
-{: .output}
-
-lists only the file that ends with `.fasta` in each data directory folder.
+Thus, `*.gbk` matches every file that ends with `.gbk`. 
 
 ## Command History
 
@@ -100,7 +81,7 @@ For example, if your history looked like this:
 ~~~
 479  ls *
 480  ls /usr/bin/*.sh
-481  ls *.fasta
+481  ls *.gbk
 ~~~
 {: .output}
 
@@ -133,21 +114,21 @@ are identical to the `man` program.
 Enter the following command:
 
 ~~~
-$ cd ~/pan_workshop/data
+$  cd ~/pan_workshop/data/agalactiae_18RS21
 $ ls
 ~~~
 {: .bash}
 
 ~~~
-Streptococcus_agalactiae_515.fasta  
-Streptococcus_agalactiae_515.gbk
+Streptococcus_agalactiae_18RS21.fna  Streptococcus_agalactiae_18RS21.gbk
 ~~~
 {: .output}
 
 ~~~
-$ less Streptococcus_agalactiae_515.fasta
+$ less Streptococcus_agalactiae_18RS21.gbk
 ~~~
 {: .bash}
+
 
 Some navigation commands in `less`
 
@@ -189,40 +170,40 @@ The commands are `head` and `tail` and they let you look at
 the beginning and end of a file, respectively.
 
 ~~~
-$ head Streptococcus_agalactiae_515.fasta 
+$  head Streptococcus_agalactiae_18RS21.gbk
 ~~~
 {: .bash}
 
 ~~~
->AAJP01000255.1
-gtcaatcaactcaatattgtcgaccttagcagcctgaaggtggctgtcaa
-cgtcgcgacgatccagaagcccaccgtgaatgtttgggtggagggtctta
-acacgaccgtccatcatttctgggaatccagtcacatcgtcgatgggaat
-ggtctcaacaccagcatcgtcaagggcaaccttagtcccaccaggtgaga
-taatatcccaacc
->AAJP01000254.1
-cgacttcatgtatgcgagatgcagcctacaatccgaactgagattggctt
-taagagattatcttgccgtcaccggcttgcgactctctgtaccaaccatt
-gtagcacgtgtgtagcccacgtcatatggggcatgatgatttgacgtcat
+LOCUS       AAJO01000169.1          2501 bp    DNA     linear   UNK
+DEFINITION  Streptococcus agalactiae 18RS21
+ACCESSION   AAJO01000169.1
+KEYWORDS    .
+SOURCE      Streptococcus agalactiae 18RS21.
+  ORGANISM  Streptococcus agalactiae 18RS21
+            Bacteria; Terrabacteria group; Firmicutes; Bacilli;
+            Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus
+            agalactiae.
+FEATURES             Location/Qualifiers
 ~~~
 {: .output}
 
 ~~~
-$ tail Streptococcus_agalactiae_515.fasta 
+$ tall Streptococcus_agalactiae_18RS21.gbk
 ~~~
 {: .bash}
 
 ~~~
-ccatgaataagcctactactgcaaaaattgcaacttctgcaaaaatttgt
-aaaccaatcggtaatcccaatcgaatatcttcaataatcaaaggagcttt
-tattctttccagagtccatatatgatatgttttaatttgaggatgaagtg
-acatcacaataataataacaataaaaatagcccaataagttaaagaagtt
-ccaagacctgcccccgcacctcctagtctaggcataccaaatttaccgta
-gataagcatataattaaaaaatgaattaaagggtagaawwaaaagcatca
-gatacatagataaccttgttaaccccaatgcatcaaagaatgaacggcaa
-atgctaaacaacaccagcggcatgattccaatcaacatataatttaaata
-accacgaccaactgctagaacttcatcttctaaacccaaactccccaaaa
-cagg
+      241 gcagtatcct gagtacggcg agacacgcga aatctcgtcg gaatctggga ggaccatctc
+      301 ccaaccctaa atactctcta gtgaccgata gtgaaccagt accgtgaggg aaaggtgaaa
+      361 agcaccccgg gaggggagtg aaatagaacc tgaaaccgtg tgcctacaac aagttcgagc
+      421 ccgttaatgg gtgagagcgt gccttttgta gaatgaaccg gcgagttacg atatgatgcg
+      481 aggttaagtt gaagagacgg agccgtaggg aaaccgagtc ttaatagggc gtcatagtat
+      541 catgttgtag acccgaaacc atgtgaccta cccatgagca ggttgaaggt gaggtaaaac
+      601 tcactggagg accgaaccag ggcacgttga aaagtgcttg gatgacttgt gggtagcgga
+      661 gaaattcaaa cgaacttgga gatagctggt tctctccgaa atagctttag ggctagcgtc
+      721 gatgttaagt ctcttggagt aga
+//
 ~~~
 {: .output}
 
@@ -230,26 +211,26 @@ The `-n` option to either of these commands can be used to print the
 first or last `n` lines of a file. 
 
 ~~~
-$ head -n 1 Streptococcus_agalactiae_515.fasta
+$ head -n 1 Streptococcus_agalactiae_18RS21.gbk
 ~~~
 {: .bash}
 
 ~~~
->AAJP01000255.1
+>LOCUS       AAJO01000169.1          2501 bp    DNA     linear   UNK
 ~~~
 {: .output}
 
 ~~~
-$ tail -n 1 Streptococcus_agalactiae_515.fasta
+ tail -n 1 Streptococcus_agalactiae_18RS21.gbk
 ~~~
 {: .bash}
 
 ~~~
-cagg
+//
 ~~~
 {: .output}
 
-## Details on the FASTA format
+## Details on the GBK format
 
 Although it looks complicated (and it is), it's easy to understand the
 [fastq](https://en.wikipedia.org/wiki/FASTA_format) format with a little decoding. Some rules about the format
@@ -265,77 +246,24 @@ We can view the first complete read in one of the files our dataset by using `he
 the first four lines.
 
 ~~~
-$ cd ~/dc_workshop/data/18RS21
-$ head -n 10 Streptococcus_agalactiae_18RS21.fasta
+$ cd ~/pan_workshop/data/agalactiae_18RS21
+$ head -n 10 Streptococcus_agalactiae_18RS21.gbk
 ~~~
 {: .bash}
 
 ~~~
->AAJO01000553.1
-cgtgaacgttgactatctacaaccgtttcttccataatggtcaaaatctt
-tgtacggtcaactttaaatgtgaatgtcttattattaacctttacttttt
-gagttgatgaactttgatctgctcgagagagttggctcatttcgtttttt
-aacgattttaactctcgacgaagactatctaattctgctgtcacatctct
-gagtaattcaggaaaagcaagtctacttttttcgtttttaaacactcaaa
-atacgatgc
->AAJO01000552.1
-gcgggtcggaacttacccgacaaggaatttcgctaccttaggaccgttat
-agttacggccgctskttactggggcttcaattcataccttcgcttacgct
+LOCUS       AAJO01000169.1          2501 bp    DNA     linear   UNK
+DEFINITION  Streptococcus agalactiae 18RS21
+ACCESSION   AAJO01000169.1
+KEYWORDS    .
+SOURCE      Streptococcus agalactiae 18RS21.
+  ORGANISM  Streptococcus agalactiae 18RS21
+            Bacteria; Terrabacteria group; Firmicutes; Bacilli;
+            Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus
+            agalactiae.
+FEATURES             Location/Qualifiers
 ~~~
 {: .output}
-
-
-** De aquí ... **
-
-
-Most of the nucleotides are correct, although we have some unknown bases (N). This is actually a good read!
-
-Line 4 shows the quality for each nucleotide in the read. Quality is interpreted as the 
-probability of an incorrect base call (e.g. 1 in 10) or, equivalently, the base call 
-accuracy (e.g. 90%). To make it possible to line up each individual nucleotide with its quality
-score, the numerical score is converted into a code where each individual character 
-represents the numerical quality score for an individual nucleotide. For example, in the line
-above, the quality score line is: 
-
-~~~
-!!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!!!!
-~~~
-{: .output}
-
-The `#` character and each of the `!` characters represent the encoded quality for an 
-individual nucleotide. The numerical value assigned to each of these characters depends on the 
-sequencing platform that generated the reads. The sequencing machine used to generate our data 
-uses the standard Sanger quality PHRED score encoding, Illumina version 1.8 onwards.
-Each character is assigned a quality score between 0 and 42 as shown in the chart below.
-
-~~~
-Quality encoding: !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJK
-                  |         |         |         |         |
-Quality score:    0........10........20........30........40..                          
-~~~
-{: .output}
-
-Each quality score represents the probability that the corresponding nucleotide call is
-incorrect. This quality score is logarithmically based, so a quality score of 10 reflects a
-base call accuracy of 90%, but a quality score of 20 reflects a base call accuracy of 99%. 
-These probability values are the results from the base calling algorithm and dependent on how 
-much signal was captured for the base incorporation. 
-
-Looking back at our read: 
-
-~~~
-@MISEQ-LAB244-W7:91:000000000-A5C7L:1:1101:13417:1998 2:N:0:TCGNAG
-CGCGATCAGCAGCGGCCCGGAACCGGTCAGCCGCGCCNT
-+
-1>AAADAAFFF1G11AA0000AAFE/AAE0FBAEGGG#B
-~~~
-{: .output}
-
-we can now see that the quality of each of the `N`s is 0 and the quality of the only
-nucleotide call (`C`) is also very poor (`#` = a quality score of 2). This is indeed a very
-bad read. 
-
-** Hasta aquí no sé qué hacer. **
 
 ## Creating, moving, copying, and removing
 
@@ -349,12 +277,12 @@ of those files. In cases like this, it's much faster to do these operations at t
 ### Copying Files
 
 When working with computational data, it's important to keep a safe copy of that data that can't be accidentally overwritten or deleted. 
-For this lesson, our raw data is our FASTA files.  We don't want to accidentally change the original files, so we'll make a copy of them
+For this lesson, our raw data is our GBK files.  We don't want to accidentally change the original files, so we'll make a copy of them
 and change the file permissions so that we can read from, but not write tcdo, the files.
 
-First, let's make a copy of one of our FASTA files using the `cp` command. 
+First, let's make a copy of one of our GBK files using the `cp` command. 
 
-Navigate to the `~/dc_workshop/data directory and enter:
+Navigate to the `~/pan_workshop/data/agalactiae_18RS21` directory and enter:
 
 ~~~
 $ for i in $(ls -d */); do cd $i; for j in $(ls *.fasta); do cp $j copy-$j  ; done; cd ..; done
