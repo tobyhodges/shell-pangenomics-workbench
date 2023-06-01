@@ -285,27 +285,18 @@ First, let's make a copy of one of our GBK files using the `cp` command.
 Navigate to the `~/pan_workshop/data/agalactiae_18RS21` directory and enter:
 
 ~~~
-$ for i in $(ls -d */); do cd $i; for j in $(ls *.fasta); do cp $j copy-$j  ; done; cd ..; done
-$ for i in $(ls -d */); do cd $i; ls -F; cd ..; done
+$ cp Streptococcus_agalactiae_18RS21.gbk Streptococcus_agalactiae_18RS21_copy.gbk
 ~~~
 {: .bash}
 
 ~~~
-copy-Streptococcus_agalactiae_18RS21.fasta  Streptococcus_agalactiae_18RS21.gbk Streptococcus_agalactiae_18RS21.fasta
-
-copy-Streptococcus_agalactiae_515.fasta  Streptococcus_agalactiae_515.gbk Streptococcus_agalactiae_515.fasta
-
-copy-Streptococcus_agalactiae_A909.fasta  Streptococcus_agalactiae_A909.gbk Streptococcus_agalactiae_A909.fasta
-
-copy-Streptococcus_agalactiae_CJB111.fasta  Streptococcus_agalactiae_CJB111.gbk Streptococcus_agalactiae_CJB111.fasta
-
-copy-Streptococcus_agalactiae_COH1.fasta  Streptococcus_agalactiae_COH1.gbk Streptococcus_agalactiae_COH1.fasta
-
-copy-Streptococcus_agalactiae_H36B.fasta  Streptococcus_agalactiae_H36B.gbk Streptococcus_agalactiae_H36B.fasta
+Streptococcus_agalactiae_18RS21_copy.gbk
+Streptococcus_agalactiae_18RS21.fna
+Streptococcus_agalactiae_18RS21.gbk
 ~~~
 {: .output}
 
-We now, for example, have two copies of the `Streptococcus_agalactiae_18RS21.fasta` file, one of them named `copy-Streptococcus_agalactiae_18RS21.fasta`. We'll move this file to a new directory called `backup` where we'll store our backup data files.
+We now, for example, have two copies of the `Streptococcus_agalactiae_18RS21.gbk` file, one of them named `Streptococcus_agalactiae_18RS21_copy.gbk`. We'll move this file to a new directory called `backup` where we'll store our backup data files.
 
 ### Creating Directories
 
@@ -323,18 +314,13 @@ We can now move our backup file to this directory. We can
 move files around using the command `mv`. 
 
 ~~~
-$ for i in $(ls -d */); do cd $i; mv copy-* ~/gm_workshop/backup; cd ..; done
+$  mv Streptococcus_agalactiae_18RS21_copy.fna backup
 $ ls backup
 ~~~
 {: .bash}
  
 ~~~
-copy-Streptococcus_agalactiae_18RS21.fasta
-copy-Streptococcus_agalactiae_515.fasta
-copy-Streptococcus_agalactiae_A909.fasta
-copy-Streptococcus_agalactiae_CJB111.fasta
-copy-Streptococcus_agalactiae_COH1.fasta
-copy-Streptococcus_agalactiae_H36B.fasta
+Streptococcus_agalactiae_18RS21_copy.gbk
 ~~~
 {: .output}
 
@@ -342,22 +328,15 @@ The `mv` command is also how you rename files. Let's rename this file to make it
 
 ~~~
 $ cd backup
-$ mv copy-Streptococcus_agalactiae_18RS21.fasta backup-Streptococcus_agalactiae_18RS21.fasta
+$ mv Streptococcus_agalactiae_18RS21_copy.gbk Streptococcus_agalactiae_18RS21_backup.gbk
 $ ls
 ~~~
 {: .bash}
 
 ~~~
-backup-Streptococcus_agalactiae_18RS21.fasta
-copy-Streptococcus_agalactiae_515.fasta
-copy-Streptococcus_agalactiae_A909.fasta
-copy-Streptococcus_agalactiae_CJB111.fasta
-copy-Streptococcus_agalactiae_COH1.fasta
-copy-Streptococcus_agalactiae_H36B.fasta
+Streptococcus_agalactiae_18RS21_backup.gbk
 ~~~
 {: .output}
-
-** Aquí voy (falta ver como cambiarle el nombre a todos los archivos en un solo ciclo)**
 
 ### Removing
 
@@ -391,9 +370,9 @@ just nicely put the files in the Trash. They're really gone.
 
 > ## Exercise 1: Make backup folder with write-protected permissions
 >
-> Starting in the `/home/dcuser/dc_workshop/data/untrimmed_fastq` directory, do the following:
+> Starting in the `/home/dcuser/pan_workshop/data/agalactiae_18RS21` directory, do the following:
 > 1. Make sure that you have deleted your backup directory and all files it contains.  
-> 2. Create a copy of each of your FASTQ files. (Note: You'll need to do this individually for each of the two FASTQ files. We haven't 
+> 2. Create a copy of each of your GBK files. (Note: You'll need to do this individually for each of the two FASTQ files. We haven't 
 > learned yet how to do this
 > with a wildcard.)  
 > 3. Use a wildcard to move all of your backup files to a new backup directory.   
@@ -402,17 +381,13 @@ just nicely put the files in the Trash. They're really gone.
 > > ## Solution
 > >
 > > 1. `rm -r backup`  
-> > 2. `cp JC1A_R1.fastq JC1A_R1-backup.fastq`, `cp JC1A_R2.fastq JC1A_R2-backup.fastq`, `cp JP4D_R1.fastq JP4D_R1-backup.fastq`  
-> > and `cp JP4D_R2.fastq JP4D_R2-backup.fastq` 
-> > 3. `mkdir backup` and `mv *-backup.fastq backup`
-> > 4. `chmod -w backup/*-backup.fastq`   
+> > 2. `cp Streptococcus_agalactiae_18RS21.gbk Streptococcus_agalactiae_18RS21_copy.gbk` 
+> > 3. `mkdir backup` and `mv *_copy.gbk backup`
+> > 4. `chmod -w backup/*-copy.gbk`   
 > > It's always a good idea to check your work with `ls -l backup`. You should see something like: 
 > > 
 > > ~~~
-> > -r--r--r-- 1 dcuser dcuser  24203913 Jun 17 23:08 JC1A_R1-backup.fastq
-> > -r--r--r-- 1 dcuser dcuser  24917444 Jun 17 23:10 JC1A_R2-backup.fastq
-> > -r--r--r-- 1 dcuser dcuser 186962503 Jun 17 23:10 JP4D_R1-backup.fastq
-> > -r--r--r-- 1 dcuser dcuser 212161034 Jun 17 23:10 JP4D_R2-backup.fastq
+> > -r-r--r-- 1 dcuser dcuser 4776510 jun  6  2022 Streptococcus_agalactiae_18RS21.gbk
 > > ~~~
 > > {: .output}
 > {: .solution}
