@@ -51,14 +51,21 @@ In this lesson you will learn how to use the command line interface to move arou
 
 ## How to access the shell
 
-On a Mac or Linux machine, you can access a shell through a program called Terminal, which is already available
-on your computer. If you're using Windows, you'll need to download a separate program to access the shell (see installation instructions [here](https://carpentries-incubator.github.io/metagenomics-workshop/setup.html)).
+On a Mac or Linux computer, you can access a shell through a program called Terminal, which is already available
+on your computer. If you're using Windows, you'll need to download a separate program to access the shell (see installation instructions [here](https://carpentries-incubator.github.io/metagenomics-workshop/setup.html)). If you have all the bioinformatic programs installed in your local machine you are all set.
 
-In this workshop, we suggest using a remote server to invest most of our time learning the basics of shell by manipulating some experimental data. The remote server already includes the required bioinformatics packages as well as the large datasets that usually take a lot of time to load into everyone's local computers.
+In this workshop, we suggest using a remote server to invest most of our time learning the basics of shell by manipulating some experimental data. The remote server already includes the required bioinformatics packages as well as the large datasets that usually take a lot of time to load into everyone's local computers. If you are in a workshop from UNAM-CCM you will access the Bash shell and the Python notebook through a JupyterHub server. If you are in another workshop you will access them through an AWS remote machine.
 
-Ask your instructor for the `ip_address` and password to login.
+### Connection to the UNAM-CCM JupyterHub (Notebooks and Terminal)
+Open the JupyterHub server login site in a new tab with [this link](https://lab.matmor.unam.mx:8443/hub/login).  
+Open this [Google sheet](https://docs.google.com/spreadsheets/d/1Lg633gpV8KrUqTn34PDM8V0glAkTZpHcm4CViRRz1N0/edit#gid=1473209790) in a new tab and write your name in a user.  
+Use this user information to log in to the JupyterHub site that you opened in the previous step.  
+To open a Bash Terminal click on the button "New" (upper right within the "Files" section) and choose the option "Terminal" from the drop-down menu. A new tab with a terminal will open.  
 
-To log in you need the `ssh` command (ssh stands for Secure Shell), your username and the adress of the machine you are logging into.
+### Connection to the AWS remote machine
+The instructor of your workshop will give you an `ip_address` and password to login.
+
+To log in you need to open the Terminal program and use the `ssh` command (ssh stands for Secure Shell), your username and the address of the machine you are logging into.
 ~~~
 $ ssh dcuser@ec2-18-702-132-236.compute-1.amazonaws.com
 ~~~
