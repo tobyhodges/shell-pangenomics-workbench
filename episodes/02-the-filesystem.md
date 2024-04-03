@@ -80,7 +80,7 @@ $ cd ../../..
 ~~~
 {: .bash}
 
-> ## Excercise 1: Finding hidden directories
+> ## Exercise 1: Finding hidden directories
 >
 > First navigate to the `pan_workshop` directory. There is a hidden directory within this directory. Explore the options for `ls` to 
 > find out how to see hidden directories. List the contents of the directory and 
