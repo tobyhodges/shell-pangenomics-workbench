@@ -1,7 +1,7 @@
 ---
 title: "Writing Scripts and Working with Data"
 teaching: 20
-exercises: 21
+exercises: 20
 questions:
 - How can we automate a commonly used set of commands?
 objectives:
