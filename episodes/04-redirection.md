@@ -1,7 +1,7 @@
 ---
 title: "Redirection"
 teaching: 30
-exercises: 21
+exercises: 20
 questions:
 - "How can I search within files?"
 - "How can I combine existing commands to do new things?"
