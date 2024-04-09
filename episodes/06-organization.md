@@ -1,7 +1,7 @@
 ---
 title: "Project Organization"
 teaching: 15
-exercises: 14
+exercises: 15
 questions:
 - "How can I organize my file system for a new bioinformatics project?"
 - "How can I document my work?"
