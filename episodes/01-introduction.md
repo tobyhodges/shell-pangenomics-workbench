@@ -1,7 +1,7 @@
 ---
 title: "Introducing the Shell"
 teaching: 20
-exercises: 10
+exercises: 7
 questions:
 - "What is a command shell and why would I use one?"
 - "How can I move around in a computer?"
