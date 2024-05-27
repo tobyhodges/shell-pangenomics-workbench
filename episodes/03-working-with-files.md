@@ -368,7 +368,7 @@ measure of security, as there is one more step between us and deleting our data 
 **Important**: The `rm` command permanently removes the file. Be careful with this command. It doesn't
 just nicely put the files in the Trash. They're really gone.
 
-> ## Exercise 1: Make backup folder with write-protected permissions
+> ## Exercise 1(Intermediate): Make backup folder with write-protected permissions
 >
 > Starting in the `/home/dcuser/pan_workshop/data/agalactiae_18RS21` directory, do the following:
 > 1. Make sure that you have deleted your backup directory and all files it contains.  
