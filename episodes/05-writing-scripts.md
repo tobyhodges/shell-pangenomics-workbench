@@ -112,7 +112,7 @@ return to the shell.
 
 Now you've written a file. You can take a look at it with `less` or `cat`, or open it up again and edit it with `nano`.
 
-> ## Exercise 1: Edit a file with nano
+> ## Exercise 1(Begginer): Edit a file with nano
 >
 > Open `README.txt` and add the date to the top of the file and save the file. 
 >
@@ -159,7 +159,7 @@ $ bash bad-reads-script.sh
 It will look like nothing happened, but now if you look at `scripted_bad_reads.txt`, you can see that there are now reads in the file.
 
 
-> ## Exercise 2: Edit a script
+> ## Exercise 2(Intermediate): Edit a script
 >
 > We want the script to tell us when it's done.  
 > 
