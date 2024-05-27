@@ -72,7 +72,7 @@ You should see the output:
 > always returns you to home.  
 {: .callout}
 
-> ## Exercise 1: Making and organized file system   
+> ## Exercise 1(Begginer): Making and organized file system   
 > Use the `mkdir` command to make the following directories:   
 > - `workshop`
 > - `workshop/docs`
@@ -169,7 +169,7 @@ $ history | tail -n 7
 ~~~
 {: .bash}
 
-> ## Exercise 2: Creating a record of the used commands 
+> ## Exercise 2(Intermediate): Creating a record of the used commands 
 > 
 > Using your knowledge of the shell, use the append redirect `>>` to create a file called
 > `workshop_log_XXXX_XX_XX.sh` (Use the four-digit year, two-digit month, and two digit day, e.g.
