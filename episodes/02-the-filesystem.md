@@ -80,7 +80,7 @@ $ cd ../../..
 ~~~
 {: .bash}
 
-> ## Exercise 1: Finding hidden directories
+> ## Exercise 1(Begginer): Finding hidden directories
 >
 > First navigate to the `pan_workshop` directory. There is a hidden directory within this directory. Explore the options for `ls` to 
 > find out how to see hidden directories. List the contents of the directory and 
@@ -248,7 +248,7 @@ Over time, it will become easier for you to keep a mental note of the
 structure of the directories that you are using and how to quickly
 navigate amongst them.
 
-> ## Exercise 2: Relative path resolution
+> ## Exercise 2(Intermediate): Relative path resolution
 > 
 > Using the filesystem diagram below, if `pwd` displays `/Users/thing`,
 > what will `ls ../backup` display?
