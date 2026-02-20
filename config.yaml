@@ -20,7 +20,7 @@ carpentry: 'incubator'
 title: 'Introduction to the Command Line for Pangenomics'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 
+created: 2021-03-16 
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'
@@ -71,7 +71,6 @@ episodes:
 - 04-redirection.md
 - 05-writing-scripts.md
 - 06-organization.md
-- 07-SRA_Toolkit.md
 
 # Information for Learners
 learners: 

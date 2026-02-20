@@ -2,8 +2,6 @@
 site: sandpaper::sandpaper_site
 ---
 
-{% include gh\_variables.html %}
-
 Command line interface (OS shell) and graphic user interface (GUI) are different ways of interacting with a computer's operating system. The shell is a program that presents a command line interface that allows you to control your computer using commands entered with a keyboard instead of controlling graphical user interfaces (GUIs) with a mouse/keyboard combination.
 
 There are quite a few reasons to start learning about the shell:
